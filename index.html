@@ -4,42 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>kraliknorbert</title>
+  <link rel="stylesheet" href="svgmenu.css">
+  <title>Navbar</title>
 </head>
 
 <body>
+  
+    <div class="container">
 
-  <div class="container">
-
-    <nav class="nav">
-
-      <div class="nav_logo">
-        <a class="nav_logo-link" href="index.html">
-          Kralik_N
-        </a>
+      <div class="logo">
+        Logo
       </div>
 
-      <div class="nav_hamburger">
+      <div class="gooey-menu">
 
-        <input class="nav_hamburger-checkbox" id="hamburger-icon" type="checkbox">
-        <label class="nav_hamburger-label" for="hamburger-icon">
-          <div class="nav_hamburger-label-div"></div>
+        <input type="checkbox" style="display:none;" id="chc" />
+
+        <label for="chc">
+          <div class="button">
+            <div class="burger"></div>
+          </div>
         </label>
 
-        <div class="menu">
-          <ul class="menu-list">
-            <li class="menu-list-item"><a class="menu-list-item-link" href="#">Home</a></li>
-            <li class="menu-list-item"><a class="menu-list-item-link" href="#">About me</a></li>
-            <li class="menu-list-item"><a class="menu-list-item-link" href="#">Contact</a></li>
-          </ul>
-        </div>
+        <div class="button press"></div>
+        <div class="button press"></div>
+        <div class="button press"></div>
 
       </div>
 
-    </nav>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none;">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feComposite in2="goo" in="SourceGraphic" result="mix" />
+          </filter>
+        </defs>
+      </svg>
 
-  </div>
+    </div>
 
 </body>
 
