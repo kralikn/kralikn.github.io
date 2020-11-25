@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000;
+  width: 100vw;
+  height: 60px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  font-size: 30px;
+  color: #fff;
+}
+
+.gooey-menu {
+  position: relative;
+  -webkit-filter: url("#goo");
+          filter: url("#goo");
+}
+
+.gooey-menu .button {
+  position: relative;
+  margin: 10px;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.gooey-menu .button:not(:first-child) {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 30px;
+  right: 0;
+  height: 0;
+  width: 0;
+  opacity: 0.5;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.gooey-menu .button:not(:first-child) i {
+  font-size: 25px;
+  color: #ff0000;
+}
+
+.gooey-menu .button:nth-child(3) {
+  z-index: 3;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.gooey-menu .button:nth-child(4) {
+  z-index: 2;
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+}
+
+.gooey-menu .button:nth-child(5) {
+  z-index: 1;
+  -webkit-transition: all 1.8s;
+  transition: all 1.8s;
+}
+
+.gooey-menu .button .burger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 4px;
+  width: 30px;
+  border-radius: 0.15em;
+  background: #ff0000;
+  z-index: 10;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.gooey-menu .button .burger:before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  background: #ff0000;
+  z-index: 10;
+  top: calc(50% - 10px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.gooey-menu .button .burger:after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  background: #ff0000;
+  z-index: 10;
+  top: calc(50% + 6px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.gooey-menu .checkbox:checked ~ label .button .burger {
+  top: 50%;
+  height: 0;
+}
+
+.gooey-menu .checkbox:checked ~ label .button .burger:before,
+.gooey-menu .checkbox:checked ~ label .button .burger:after {
+  top: calc(50% - 2px);
+}
+
+.gooey-menu .checkbox:checked ~ label .button .burger:before {
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+}
+
+.gooey-menu .checkbox:checked ~ label .button .burger:after {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.gooey-menu .checkbox:checked ~ .button:not(:first-child) {
+  top: 0;
+  height: 60px;
+  width: 60px;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.gooey-menu .checkbox:checked ~ .button:nth-child(3) {
+  right: 80px;
+}
+
+.gooey-menu .checkbox:checked ~ .button:nth-child(4) {
+  right: 160px;
+}
+
+.gooey-menu .checkbox:checked ~ .button:nth-child(5) {
+  right: 240px;
+}
+/*# sourceMappingURL=style.css.map */

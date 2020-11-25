@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="svgmenu.css">
+  <script src="https://kit.fontawesome.com/961cefa9f9.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
   <title>Navbar</title>
 </head>
 
@@ -18,17 +19,17 @@
 
       <div class="gooey-menu">
 
-        <input type="checkbox" style="display:none;" id="chc" />
+        <input type="checkbox" style="display:none;" class="checkbox" id="checkbox"/>
 
-        <label for="chc">
+        <label for="checkbox">
           <div class="button">
             <div class="burger"></div>
           </div>
         </label>
 
-        <div class="button press"></div>
-        <div class="button press"></div>
-        <div class="button press"></div>
+        <div class="button press"><i class="fas fa-envelope"></i></div>
+        <div class="button press"><i class="fas fa-user-friends"></i></div>
+        <div class="button press"><i class="fas fa-home"></i></div>
 
       </div>
 
@@ -37,11 +38,11 @@
           <filter id="goo">
             <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
             <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-            <feComposite in2="goo" in="SourceGraphic" result="mix" />
+            <feComposite in2="goo" in="SourceGraphic" result="atop" />
           </filter>
         </defs>
       </svg>
-
+ 
     </div>
 
 </body>
