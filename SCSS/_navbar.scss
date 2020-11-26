@@ -1,0 +1,139 @@
+.navbar {
+	z-index: 500;
+	position: fixed; /* Set the navbar to fixed position*/
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	display: flex;
+  justify-content: space-between;
+	align-items: center;
+  margin: auto;
+}
+
+.logo {
+  width: 85px;
+  height: 35px;
+}
+
+.gooey-menu {
+  position: relative;
+  filter: url("#goo");
+
+  .button {
+    position: relative;
+    margin: 0;
+    height: 40px;
+		width: 40px;
+		border:1px solid #ff0000;
+    border-radius: 100%;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+		z-index:10;
+
+    &:not(:first-child) {
+      position:absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 30px;
+      right: 0;
+      height: 0;
+      width: 0;
+      opacity: 0.5;
+      transform: scale(0);
+
+      i {
+        font-size: 20px;
+        color: #ff0000;
+      }
+    }
+
+    &:nth-child(3) {
+      z-index:3;
+      transition: all 0.6s;
+    }
+
+    &:nth-child(4) {
+      z-index:2;
+      transition: all 1.2s;
+    }
+    &:nth-child(5) {
+      z-index:1;
+      transition: all 1.8s;
+    }
+
+    .burger {
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height:3px;
+      width:20px;
+      border-radius:0.15em;
+      background:#ff0000;
+      z-index:10;
+      transition: all 0.3s;
+    }
+    .burger:before {
+      content:'';
+      position:absolute;
+      height:3px;
+      width:20px;
+      background:#ff0000;
+      z-index:10;
+      top:calc(50% - 10px);
+      transition: all 0.3s;
+    }
+
+    .burger:after {
+      content:'';
+      position:absolute;
+      height:3px;
+      width:20px;
+      background:#ff0000;
+      z-index:10;
+      top:calc(50% + 6px);
+      transition: all 0.3s;
+    }
+  }
+
+  .checkbox:checked ~ label .button .burger {
+    top:50%;
+    height:0;
+  }
+
+  .checkbox:checked ~ label .button .burger:before,
+  .checkbox:checked ~ label .button .burger:after {
+    top:calc(50% - 2px);
+  }
+
+  .checkbox:checked ~ label .button .burger:before {
+    transform:rotate(-225deg);
+  }
+
+  .checkbox:checked ~ label .button .burger:after {
+    transform:rotate(225deg);
+  }
+
+  .checkbox:checked ~ .button:not(:first-child) {
+    top:0;
+    height: 40px;
+    width: 40px;
+    opacity: 1;
+    transform: scale(1);
+    transition-timing-function: ease-in-out;
+  }
+  
+  .checkbox:checked ~ .button:nth-child(3) {
+    right: 55px;
+  }
+  
+  .checkbox:checked ~ .button:nth-child(4) {
+    right: 110px;
+  }
+  
+  .checkbox:checked ~ .button:nth-child(5) {
+    right: 165px;
+  }
+}
