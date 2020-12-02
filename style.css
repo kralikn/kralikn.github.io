@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.pizza_menu {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: cornflowerblue;
+}
+
+.pizzaBox {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.pizza_img {
+  width: 100%;
+  transition: 1.5s;
+  z-index: 999;
+}
+
+.pizza_slice_img_box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 20px; */
+  z-index: -1;
+  opacity: 0;
+}
+
+.pizza_slice_img_box img {
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+}
+
+.pizza_slice_img_box a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px;
+  letter-spacing: 1px;
+}
+
+.pizza_menu.clicked .pizza_img {
+  transform: rotate(1440deg);
+  opacity: 0;
+}
+
+.pizza_slice_img_box:nth-child(2) {
+  transition: all 0.6s;
+}
+
+.pizza_slice_img_box:nth-child(3) {
+  transition: all 1.5s;
+}
+
+.pizza_slice_img_box:nth-child(4) {
+  transition: all 2.4s;
+}
+.pizza_slice_img_box:nth-child(2) img {
+  transition: all 0.6s;
+}
+
+.pizza_slice_img_box:nth-child(3) img {
+  transition: all 1.5s;
+}
+
+.pizza_slice_img_box:nth-child(4) img {
+  transition: all 2.4s;
+}
+
+.pizza_menu.clicked .pizza_slice_img_box:nth-child(2) {
+  left: -60px;
+  opacity: 1;
+  z-index: 1;
+  /* transform: scale(1); */
+}
+
+.pizza_menu.clicked .pizza_slice_img_box:nth-child(2) img {
+  transform: rotate(1485deg);
+}
+.pizza_menu.clicked .pizza_slice_img_box:nth-child(3) img {
+  transform: rotate(1485deg);
+}
+.pizza_menu.clicked .pizza_slice_img_box:nth-child(4) img {
+  transform: rotate(1485deg);
+}
+.pizza_menu.clicked .pizza_slice_img_box:nth-child(3) {
+  left: -150px;
+  opacity: 1;
+  z-index: 1;
+  /* transform: scale(1); */
+}
+.pizza_menu.clicked .pizza_slice_img_box:nth-child(4) {
+  left: -240px;
+  opacity: 1;
+  z-index: 1;
+  /* transform: scale(1); */
+}
+
