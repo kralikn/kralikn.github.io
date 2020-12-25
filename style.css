@@ -4,7 +4,142 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: sans-serif;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  border: 2px solid #222;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #333;
+}
+
+.links-menu,
+#submenu li {
+  list-style: none;
+  display: flex;
+}
+
+.links-menu li a,
+#submenu a {
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+}
+
+.links-menu li a:hover,
+#submenu a:hover {
+  background: #333;
+  color: #f1f1f1;
+}
+
+#services-submenu {
+  position: relative;
+}
+
+#services-submenu #submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+}
+
+#services-submenu #submenu.active {
+  display: block;
+}
+
+#services-submenu #submenu li a {
+  display: block;
+  width: 250px;
+}
+
+#dropdown-menu {
+  display: flex;
+}
+
+.hamburger {
+  display: none;
+}
+
 section {
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduction {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #a7ffeb;
+}
+
+.intro {
+  border: 2px solid #444;
+  flex: 0 0 45%;
+}
+
+.services-box-1,
+.services-box-2,
+.services-box-3,
+.services-box-4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.services-box-1 { background: #ffd740;}
+.services-box-2 { background: #ff9100;}
+.services-box-3 { background: #76ff03;}
+.services-box-4 { background: #ff8a65;}
+
+.services-box-1,
+.services-box-2,
+.services-box-3 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.services-box-2 img,
+.services-box-4 img {
+  order: 1;
+  width: 40%;
+}
+
+.services-box-1 img,
+.services-box-3 img {
+  order: 0;
+  width: 40%;
+}
+
+.services-box-1 .content,
+.services-box-2 .content,
+.services-box-3 .content,
+.services-box-4 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40%;
+  height: 60%;
+}
+
+
+.contact {
+  background: #80d8ff;
 }
