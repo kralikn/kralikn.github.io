@@ -4,6 +4,8 @@ menü:
 	- szolgáltatások
 	- kapcsolat
 
+vagy nincs menü, csak két gomb a szolgáltatáshoz és a kapcsolathoz
+
 section 1:
 	intro:
 		- h1, p, button
@@ -35,3 +37,7 @@ section 3:
 scrollozáskokor:
 	-smooth
 	-elemekre effekt?
+
+
+content:
+

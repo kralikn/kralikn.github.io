@@ -6,9 +6,21 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+}
+
+.intro-logo {
+  position: absolute;
+  top: 1rem;
+  left: 5%;
+  font-size: 2em;
+  text-transform: uppercase;
 }
 
 .header {
@@ -16,6 +28,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  height: 3em;
   padding: 0 2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,9 +40,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-transform: uppercase;
-  letter-spacing: .1em;
-  background: #333;
-  color: #eee;
+  color: #333;
 }
 
 @media (min-width: 641px) and (max-width: 768px) {
@@ -64,8 +75,7 @@ body {
   top: 3em;
   left: 0;
   width: 100%;
-  background: #333;
-  color: #eee;
+  color: #333;
 }
 
 @media (max-width: 640px) {
@@ -84,12 +94,9 @@ body {
 .header .navigation .links-menu a {
   display: inline-block;
   text-decoration: none;
+  letter-spacing: 1px;
   padding: 1em 2em;
-  color: #eee;
-}
-
-.header .navigation .links-menu a:hover {
-  background: #fff;
+  color: #333;
 }
 
 .header .hamburger {
@@ -141,5 +148,117 @@ body {
   width: 100%;
   height: .2em;
   background: #eee;
+}
+
+.introduction {
+  max-width: 95%;
+  margin: auto;
+  height: 100vh;
+  padding-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.introduction-content {
+  width: 35%;
+  z-index: 1;
+  margin-left: 2em;
+}
+
+.introduction-content .btnBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-transform: uppercase;
+}
+
+.introduction-content .btnBox .services,
+.introduction-content .btnBox .contact {
+  display: inline-block;
+  text-decoration: none;
+  padding: .5rem 1.5rem;
+  border-radius: 2.5em;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.introduction-content .btnBox .services {
+  margin-right: 2rem;
+  background: #ad263d;
+  color: #fff;
+  border: 1px solid #ad263d;
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.introduction-content .btnBox .services:hover {
+  opacity: .9;
+}
+
+.introduction-content .btnBox .contact {
+  color: #ad263d;
+  border: 1px solid #ad263d;
+  border-radius: 2.5em;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.introduction-content .btnBox .contact:hover {
+  opacity: .9;
+  background: #ad263d;
+  color: #fff;
+}
+
+.introduction-content > * {
+  margin-bottom: 2rem;
+}
+
+.introduction h1 {
+  font-size: 3.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+  color: #1e1204;
+}
+
+.introduction p {
+  letter-spacing: .5px;
+  line-height: 1.5;
+  color: #1e1204;
+}
+
+.introduction-image {
+  width: 65%;
+}
+
+.introduction-image img {
+  width: 100%;
+}
+
+.services-box,
+.contact-box {
+  width: 100%;
+  height: 100vh;
+}
+
+.services-box {
+  background: #9fcfff;
+}
+
+.contact-box {
+  background: rgba(173, 38, 61, 0.2);
 }
 /*# sourceMappingURL=style.css.map */
