@@ -1,15 +1,12 @@
 function loadedPage(){
 
-  const servicesSubmenu = document.getElementById('services-submenu');
-  const submenu = document.getElementById('submenu');
+  const hamburger = document.getElementById('hamburger');
+  const navigation = document.querySelector('.navigation');
 
-  servicesSubmenu.addEventListener('click', function(){
-    submenu.classList.toggle('active');
+  hamburger.addEventListener('click', function(){
+    navigation.classList.toggle('active');
   });
 
 }
-
-
-
 
 window.addEventListener('load', loadedPage);

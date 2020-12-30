@@ -1,0 +1,37 @@
+menü:
+	- logo?
+	(- rólunk?)
+	- szolgáltatások
+	- kapcsolat
+
+section 1:
+	intro:
+		- h1, p, button
+		- kép
+		- alul hullám?
+
+(
+	section x:
+	rólunk:
+		- rövid bemutatkozás
+		- hol vállal munkát
+		- referenciák
+)
+
+section 2:
+	szolgáltatások:
+		kártyák:
+			ikon/kis képek
+			h3, p
+			button?
+
+section 3:
+	kapcsolat:
+		ikonok, elérhetőségek:
+			- telefon
+			- email
+			- facebook
+
+scrollozáskokor:
+	-smooth
+	-elemekre effekt?
