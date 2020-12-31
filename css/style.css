@@ -18,8 +18,8 @@ body {
 .intro-logo {
   position: absolute;
   top: 1rem;
-  left: 5%;
-  font-size: 2em;
+  left: 2.5%;
+  font-size: 2.5em;
   text-transform: uppercase;
 }
 
@@ -151,7 +151,7 @@ body {
 }
 
 .introduction {
-  max-width: 95%;
+  max-width: 100%;
   margin: auto;
   height: 100vh;
   padding-top: 2em;
@@ -171,8 +171,18 @@ body {
 
 .introduction-content {
   width: 35%;
+  height: 52vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   z-index: 1;
-  margin-left: 2em;
 }
 
 .introduction-content .btnBox {
@@ -222,15 +232,10 @@ body {
   color: #fff;
 }
 
-.introduction-content > * {
-  margin-bottom: 2rem;
-}
-
 .introduction h1 {
-  font-size: 3.5em;
+  font-size: 3.8em;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1;
+  line-height: 1.1;
   color: #1e1204;
 }
 
@@ -241,7 +246,7 @@ body {
 }
 
 .introduction-image {
-  width: 65%;
+  width: 60%;
 }
 
 .introduction-image img {
