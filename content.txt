@@ -1,5 +1,5 @@
 menü:
-	- logo?
+	- logo: rendes udvar, tiszta ház - betűtípus választás
 	(- rólunk?)
 	- szolgáltatások
 	- kapcsolat
@@ -26,6 +26,13 @@ section 2:
 			ikon/kis képek
 			h3, p
 			button?
+	
+	- kertészeti munkák						-
+	- gépek bérbeadása
+	- takarítás										-
+	- bútorok összeszerelése			-
+	- medence karbantartás				-
+	- társasházi szolgáltatások
 
 section 3:
 	kapcsolat:
