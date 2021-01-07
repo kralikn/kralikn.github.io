@@ -48,3 +48,9 @@ scrollozáskokor:
 
 content:
 
+
+
+iPad: 768px
+
+hamburger:
+mobile: 640px
