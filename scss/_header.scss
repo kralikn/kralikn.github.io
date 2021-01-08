@@ -44,6 +44,7 @@ $font-color: #333;
 
   &_menu {
     display: flex;
+    background: #fff;
     
     @media screen and (max-width: 640px) {
       position: absolute;

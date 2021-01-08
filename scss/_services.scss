@@ -1,0 +1,47 @@
+.services {
+  width: 100%;
+  min-height: 100vh;
+  // border: 1px solid red;
+  
+  &_box {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+
+  }
+  
+  &_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex: 0 0 28%;
+    margin: 0.5rem 0;
+    padding: 1rem .5rem;
+    border: 1px solid red;
+
+    @media screen and (max-width: 480px) {
+      min-height: 100vh;
+      justify-content: flex-start;
+    }
+
+    &_img {
+      width: 30%;
+
+      @media screen and (max-width: 480px) {
+        width: 40%;
+      }
+    }
+
+    h3 {
+      line-height: 1
+    };
+  }
+}

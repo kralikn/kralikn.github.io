@@ -1,0 +1,58 @@
+.hero {
+  width: 100%;
+  height: calc(100vh - 3rem);
+  display: flex;
+  // border: 1px solid red;
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    padding: 0 1rem;
+    // border: 1px solid red;
+  }
+
+  
+  &_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 40%;
+    padding-left: 2rem;
+    // border: 1px solid red;
+
+    .btn {
+      display: block;
+      text-decoration: none;
+      width: fit-content;
+      padding: 0.2rem .8rem;
+      border-radius: 1em;
+      font-weight: 400;
+      background: #ad263d;
+      color: #fff;
+      border: 1px solid #ad263d;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 0;
+    }
+  }
+  
+  &_image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-basis: 60%;
+    // border: 1px solid red;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: -2rem;
+      transform: translateY(-50%);
+      width: 100%;
+
+      @media screen and (max-width: 640px) {
+        width: 93%;
+      }
+    }
+  }
+}
